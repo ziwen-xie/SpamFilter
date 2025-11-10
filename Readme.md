@@ -56,7 +56,7 @@ $$\hat{P}(X_i = 0|y=0) = 1- \hat{P}(X_i = 1|y=0)$$
 $$\hat{P}(X_i = 0|y=1) = 1- \hat{P}(X_i = 1|y=1)$$
 
 With the above prior probability we can estimate $\hat{P}(y=1)$ as :
-$$\hat{P}(y=1) = \frac{ \# \{y=1\}  }{N}$$
+$$\hat{P}(y=1) = \frac{ number \ of \{y=1\}  }{N}$$
 
 ## Predict and evaluation
 The evaluation function gets the probability table we calculated $PXY$ and $\hat{P}(y=1)$ and as well as the test set X2 and y2.
