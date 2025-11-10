@@ -1,1 +1,22 @@
 # Spam Filter Project
+
+Download the below MATLAB file. It includes training data and test data for the spam filter.
+Training data : X, y
+Test Data: X2, y2
+Choose k=1 (Smoothing factor)
+
+Write a code in your preferred language (MATLAB, R, Python, C++, Java, etc.)  for a Bayes classifier as described in the lectures (Please refer to the video recoding below and notes - recorded last semester, so please ignore the mentioned dates). Submit a full report in a single pdf file that includes 
+- Your Code
+- Documentation and explanation of your Code
+- The obtained (test) accuracy.
+
+# Project Description
+This is the spam filter project for ECE603. The goal is to construct a method to filter spam emails. 
+The repository consist the follow items:
+ - `main.py` the spam filter code in python.
+ - `spamdata.mat` the data of the spam filter project.
+ - `requirements.txt`  the required package in this project.
+ - `readme.md` a drscription file.
+
+# Input Data Structure
+The input data is a matrix that contains
