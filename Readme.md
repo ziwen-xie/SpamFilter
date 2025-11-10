@@ -34,4 +34,4 @@ X,X2,y,y2 is imported. y and y2 is adjusted to 1D shape for process.This is to e
 
 
 ### The Naive Bayes training function
-This function gets input of the training data set and output the conditional probabilities of each feature PXY and the estimate of (y = 1) phat1
+This function gets input of the training data set and output the conditional probabilities of each feature $PXY$ and the estimate of $ \hat{p}(y = 1)$
