@@ -69,7 +69,7 @@ For the prediction, for each element in X2, we calculate:
 
 $$P(y=1|x_i) = P(y=1) \times P(x_i|y=1)$$ and we add this up for the entire feature space to get the probability of the email.
 
-For each email, we calucalte two numbers a and b,
+For each email, we calculate two numbers a and b,
 where a is $$a = P(X_1 = x_1| y=0)P(X_2= x_2| y = 0) ...P(X_m = x_m| y=0)P(y = 0)$$
 and $$b = P(X_1 = x_1| y=1)P(X_2= x_2| y = 1) ...P(X_m = x_m| y=1)P(y = 1)$$
 
@@ -77,4 +77,4 @@ this gives the total probability of this email belong to spam or not spam.
 If $a>b$, this email is not spam, otherwise,it is spam
 
 ## Result 
-The output accuracy is 0.944
+The output accuracy is 0.944, which is a hgh accuracy. It shows that the algorithm can give a plausible prediction result. 
