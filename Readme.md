@@ -20,8 +20,8 @@ The repository consist the follow items:
 
 ## Input Data Structure
 The input data is a matrix that contains four arrays:
-- `X` is a (1000,200) array that represents training input data. Each set of X is a 200 word email. 
-- `y` is the training labels of shape (1000,1). Each set of y is a binary number of 0 or 1, which represent whether or not the email is spam. 0 means not spam and 1 means spam.
+- `X` is a (1000,200) array that represents training input data. Each email has a length of X, and if at index i it contains the word "refinance", it is recorded as 1, if not, it is recorded as 0. 
+- `y` is the training labels of shape (1000,1). Each index of y is a binary number of 0 or 1, which represent whether or not the email is spam. 0 means not spam and 1 means spam.
 - `X2` is a (1000,200) array that represent text input data, which is 1000 emails for test
 - `y2` is a (1000,1) binary label for test data.
 

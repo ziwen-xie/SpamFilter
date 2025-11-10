@@ -20,7 +20,7 @@ y2 = np.ravel(y2).astype(int)
 # set smooth factor
 k = 1 # by default k is 1
 
-# Naive Bayes training function, the function gets input of the training data set and output the conditional probabilities of each feature PXY and the estimate of (y = 1) phat1
+# Naive Bayes training function, the function gets input of the training data set and output the conditional probabilities of each index PXY and the estimate of (y = 1) phat1
 def trainNB(X,y,k):
 
     # get the shape of the training array, N is number of emails (1000) , M is length of emails(200)
