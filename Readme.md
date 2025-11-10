@@ -35,3 +35,32 @@ X,X2,y,y2 is imported. y and y2 is adjusted to 1D shape for process.This is to e
 
 ### The Naive Bayes training function
 This function gets input of the training data set and output the conditional probabilities of each feature $PXY$ and the estimate of $\hat{p}(y = 1)$
+
+We assume conditional independence:
+ $$P(X_1 = i, X_2 = j | y=1) = P(X_1 = i|y=1) \times P(x_2 =j,|y=1)$$
+We can estimate $P(X_1 = i|y=1)$ as:
+$$P(x_1 = i|y=1) = \frac{ \# \{x_1 = i\}}{\# \{ y=1 \} }$$
+
+So, in the training function, we estimate $P(X_i = 1|y=0)$ and $P(X_i = 1|y = 1)$ for $i = 1,2,3,...,M$
+
+That is:
+
+$$\hat{P}(X_i = 1|y=0) = \frac{ \# \{x_i = 1, y=0\} + k }{\# \{ y=0 \} + 2k }$$
+
+and that:
+$$\hat{P}(X_i = 1|y=1) = \frac{ \# \{x_i = 1, y=1\} + k }{\# \{ y=1 \} + 2k }$$
+
+With the $\hat{P}(X_i = 1|y=0)$ and $\hat{P}(X_i = 1|y=1)$ we can calculate the probability of $\hat{P}(X_i = 0|y=0)$ and $\hat{P}(X_i = 0|y=1)$ as:
+
+$$\hat{P}(X_i = 0|y=0) = 1- \hat{P}(X_i = 1|y=0)$$
+$$\hat{P}(X_i = 0|y=1) = 1- \hat{P}(X_i = 1|y=1)$$
+
+With the above prior probability we can estimate $\hat{P}(y=1)$ as :
+$$\hat{P}(y=1) = \frac{ \# \{y=1\}  }{N}$$
+
+## Predict and evaluation
+The evaluation function gets the probability table we calculated $PXY$ and $\hat{P}(y=1)$ and as well as the test set X2 and y2.
+
+It loops through X2 and predict if it is spam for each email, we then compare the result as the ground truth y2, and output the accuracy as:
+
+$$accuracy = \frac{correct\ prediction}{incorrect \ prediction}$$
