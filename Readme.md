@@ -39,16 +39,16 @@ This function gets input of the training data set and output the conditional pro
 We assume conditional independence:
  $$P(X_1 = i, X_2 = j | y=1) = P(X_1 = i|y=1) \times P(x_2 =j,|y=1)$$
 We can estimate $P(X_1 = i|y=1)$ as:
-$$P(x_1 = i|y=1) = \frac{ \# \{x_1 = i\}}{\# \{ y=1 \} }$$
+$$P(x_1 = i|y=1) = \frac{ number \ of  \{x_1 = i\}}{number \ of \{ y=1 \} }$$
 
 So, in the training function, we estimate $P(X_i = 1|y=0)$ and $P(X_i = 1|y = 1)$ for $i = 1,2,3,...,M$
 
 That is:
 
-$$\hat{P}(X_i = 1|y=0) = \frac{ \# \{x_i = 1, y=0\} + k }{\# \{ y=0 \} + 2k }$$
+$$\hat{P}(X_i = 1|y=0) = \frac{ number \ of \{x_i = 1, y=0\} + k }{number \ of \{ y=0 \} + 2k }$$
 
 and that:
-$$\hat{P}(X_i = 1|y=1) = \frac{ \# \{x_i = 1, y=1\} + k }{\# \{ y=1 \} + 2k }$$
+$$\hat{P}(X_i = 1|y=1) = \frac{ number \ of \{x_i = 1, y=1\} + k }{number \ of \{ y=1 \} + 2k }$$
 
 With the $\hat{P}(X_i = 1|y=0)$ and $\hat{P}(X_i = 1|y=1)$ we can calculate the probability of $\hat{P}(X_i = 0|y=0)$ and $\hat{P}(X_i = 0|y=1)$ as:
 
