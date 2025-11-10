@@ -26,8 +26,12 @@ The input data is a matrix that contains four arrays:
 - `y2` is a (1000,1) binary label for test data.
 
 ## Structure of code
-The code is seperated to the below parts. 
-### Data import
+The code is seperated to the following parts. 
+### Data import and preprocess
 This part imports the data and extract the arrays from `data`.
 
-### 
+X,X2,y,y2 is imported. y and y2 is adjusted to 1D shape for process.This is to ensure the compare of y values in the later parts works correctly.
+
+
+### The Naive Bayes training function
+This function gets input of the training data set and output the conditional probabilities of each feature PXY and the estimate of (y = 1) phat1
