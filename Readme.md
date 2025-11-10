@@ -10,7 +10,7 @@ Write a code in your preferred language (MATLAB, R, Python, C++, Java, etc.)  fo
 - Documentation and explanation of your Code
 - The obtained (test) accuracy.
 
-# Project Description
+## Project Description
 This is the spam filter project for ECE603. The goal is to construct a method to filter spam emails. 
 The repository consist the follow items:
  - `main.py` the spam filter code in python.
@@ -18,5 +18,16 @@ The repository consist the follow items:
  - `requirements.txt`  the required package in this project.
  - `readme.md` a drscription file.
 
-# Input Data Structure
-The input data is a matrix that contains
+## Input Data Structure
+The input data is a matrix that contains four arrays:
+- `X` is a (1000,200) array that represents training input data. Each set of X is a 200 word email. 
+- `y` is the training labels of shape (1000,1). Each set of y is a binary number of 0 or 1, which represent whether or not the email is spam. 0 means not spam and 1 means spam.
+- `X2` is a (1000,200) array that represent text input data, which is 1000 emails for test
+- `y2` is a (1000,1) binary label for test data.
+
+## Structure of code
+The code is seperated to the below parts. 
+### Data import
+This part imports the data and extract the arrays from `data`.
+
+### 
