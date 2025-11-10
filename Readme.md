@@ -58,9 +58,23 @@ $$\hat{P}(X_i = 0|y=1) = 1- \hat{P}(X_i = 1|y=1)$$
 With the above prior probability we can estimate $\hat{P}(y=1)$ as :
 $$\hat{P}(y=1) = \frac{ number \ of \{y=1\}  }{N}$$
 
-## Predict and evaluation
+### Predict and evaluation
 The evaluation function gets the probability table we calculated $PXY$ and $\hat{P}(y=1)$ and as well as the test set X2 and y2.
 
 It loops through X2 and predict if it is spam for each email, we then compare the result as the ground truth y2, and output the accuracy as:
 
 $$accuracy = \frac{correct\ prediction}{incorrect \ prediction}$$
+
+For the prediction, for each element in X2, we calculate:
+
+$$P(y=1|x_i) = P(y=1) \times P(x_i|y=1)$$ and we add this up for the entire feature space to get the probability of the email.
+
+For each email, we calucalte two numbers a and b,
+where a is $$a = P(X_1 = x_1| y=0)P(X_2= x_2| y = 0) ...P(X_m = x_m| y=0)P(y = 0)$$
+and $$b = P(X_1 = x_1| y=1)P(X_2= x_2| y = 1) ...P(X_m = x_m| y=1)P(y = 1)$$
+
+this gives the total probability of this email belong to spam or not spam. 
+If $a>b$, this email is not spam, otherwise,it is spam
+
+## Result 
+The output accuracy is 0.944
